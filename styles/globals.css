@@ -87,12 +87,13 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    background-color: white;
 }
 
 a {
@@ -105,3 +106,21 @@ a {
     color-scheme: dark;
   }
 }
+
+
+/* Header Menu Component */
+#headerMenu.headerMenu {
+  background: white;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateX(calc(-102%));
+  transition: 0.3s;
+}
+
+#headerMenu.headerMenu.open {
+  transform: translateX(0);
+}
+
+/* end */

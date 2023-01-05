@@ -1,7 +1,9 @@
 import Head from "next/head"
-import {DatePicker} from 'antd'
+import { ReactElement } from "react";
+import AuthenticationLayout from "../../layouts/AuthenticationLayout";
+import { NextPageWithLayout } from "../_app";
 
-export default function () {
+const LoginPage: NextPageWithLayout = () => {
     return (
         <>
             <Head>
@@ -11,8 +13,18 @@ export default function () {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                
+                Here is login page
             </main>
         </>     
     );
 }
+
+LoginPage.getLayout = function getLayout(page: ReactElement){
+    return(
+        <AuthenticationLayout>
+            {page}
+        </AuthenticationLayout>
+    )
+}
+
+export default LoginPage;
